@@ -10,11 +10,11 @@
   color: white;
   font-family: "Roboto", sans-serif;
 }
-.backgroundForest {
+.forest-background {
   background: url("https://i.ibb.co/dBLbrRV/bg1.jpg");
 }
 
-.backgroundFlowers {
+.plant-background {
   background: url("https://i.ibb.co/Fb5jb3J/bg2.jpg");
   color: #333;
 }
@@ -30,4 +30,11 @@
   /*background: url("https://i.ibb.co/dBLbrRV/bg1.jpg");*/
   background-size: cover;
   background-attachment: fixed;
+}
+
+.box-1 {
+  grid-column: 1 / 3;
+}
+.box-6 {
+  grid-column: 3/5;
 }
