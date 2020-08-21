@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device=width,initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
-      crossorigin="anonymous"
+       href="/fonts/fontawesome-free-5.3.1-web/css/all.css"
     />
     <link rel="stylesheet" href="imagespan.css" />
-    <script src = "imagespan.js"></script>
+   
+
     <title>Health panel</title>
   </head>
   <body class="main-style">
     <div class="container" id="container">
    
-        <div class="forest-background box-1"> <!--Multiple classes leave space in between names-->
+        <div class="forest-background box-1">
         
-          <h2>16 <span>| 24</span></h2>
+          <!-- <h2>16 <span>| 24</span></h2> -->
+          <i class="fab fa-twitter"></i>
           <p>Goals Completed</p>
         </div>
 
@@ -30,7 +30,7 @@
           <h2 class="subtitle"><i class="fas fa-running"></i></h2>
           <p class="style-text">Miles</p>
         </div>
-        <div class="forest-background" id = "box4" onclick="getLocation()">
+        <div class="forest-background" id = "box4">
           <h2 class="subtitle">36 &deg;</h2>
           <p class="style-text">Temperature</p>
         </div>
@@ -70,4 +70,21 @@
     </div>
 
   </body>
+  <script src="config.js"></script>
+  <script>
+    var routesDictionary = new Map();
+    document.addEventListener("DOMContentLoaded", () => {
+      const divs = document.getElementsByTagName("div");
+      const numberOfDivs = divs.length;
+      for (let i = 1; i < numberOfDivs; i++) {
+        let url = "";
+        routesDictionary.set(divs[i].id, url);
+      }
+    });
+    function directUserToURL(id_of_div) {
+      let url = routesDictionary.get(id_of_div);
+      window.open(url);
+    }
+      </script>
+      <script src="weather.js"></script>
 </html>
