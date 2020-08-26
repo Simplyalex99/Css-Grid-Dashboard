@@ -27,8 +27,8 @@ function success(position) {
         console.log(body);
         let temperature = Math.floor(body.list[0].main.temp - KELVIN);
         document
-          .getElementById("box4")
-          .getElementsByTagName("h2")[0].innerText = `${temperature}\xB0`; // not setting
+          .getElementById("wrapper-4")
+          .getElementsByTagName("h2")[0].innerText = `${temperature}\xB0`; 
       });
   } catch (err) {}
 }

@@ -3,88 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device=width,initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-       href="/fonts/fontawesome-free-5.3.1-web/css/all.css"
-    />
-    <link rel="stylesheet" href="imagespan.css" />
+
    
+    <link rel="stylesheet" href="imagespan.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.js"
+    integrity="sha256-2JRzNxMJiS0aHOJjG+liqsEOuBb6++9cY4dSOyiijX4=" crossorigin="anonymous"></script>
 
     <title>Health panel</title>
   </head>
-  <body class="main-style">
+  <body class="style">
     <div class="container" id="container">
    
-        <div class="forest-background box-1">
+        <div class="forest-background " onclick = "directUserToURL(this.id)" id = "wrapper-1">
         
-          <!-- <h2>16 <span>| 24</span></h2> -->
-          <i class="fab fa-twitter"></i>
-          <p>Goals Completed</p>
+          
+      <h2 class = "subtitle">  <i class="fab fa-apple"></i></h2>
+          <p class="style-text">Apple</p>
         </div>
 
-        <div class="forest-background">
-          <h2 class="subtitle"><i class="fas fa-battery-three-quarters"></i></h2>
-          <p class= "style-text">Respiration</p>
+        <div class="forest-background" onclick = "directUserToURL(this.id)" id = "wrapper-2">
+          <h2 class="subtitle"><i class="fab fa-twitter"></i></h2>
+          <p class= "style-text">Twitter</p>
         </div>
-        <div class="box-3">
-          <h2 class="subtitle"><i class="fas fa-running"></i></h2>
-          <p class="style-text">Miles</p>
+        <div  onclick = "directUserToURL(this.id)" id = "wrapper-3">
+          <h2 class="subtitle"><i class="fab fa-linkedin"></i></h2>
+          <p class="style-text">Linkedin</p>
         </div>
-        <div class="forest-background" id = "box4">
+        <div class="forest-background"  onclick = "directUserToURL(this.id)" id = "wrapper-4">
           <h2 class="subtitle">36 &deg;</h2>
           <p class="style-text">Temperature</p>
         </div>
-        <div class="forest-background">
-          <h2 class="subtitle"><i class="fas fa-bed"></i></h2>
-          <p class="style-text">Sleep Keep</p>
+        <div class="forest-background" onclick = "directUserToURL(this.id)" id = "wrapper-5">
+          <h2 class="subtitle"><i class="fab fa-facebook-square"></i></h2>
+          <p class="style-text">Facebook</p>
         </div>
-        <div class="box-6">
-          <h2 class = "subtitle">98 <span class="subtitle-span">bpm</span></h2>
-          <p>Heart Rate</p>
+        <div onclick = "directUserToURL(this.id)" id = "wrapper-6">
+          <h2 class = "subtitle"><i class="fab fa-instagram"></i></h2>
+          <p>Instagram</p>
         </div>
-        <div class="forest-background">
-          <h2 class="subtitle">170 <span>lbs</span></h2>
-          <p class="style-text">Weight</p>
+        <div class="forest-background" onclick = "directUserToURL(this.id)" id = "wrapper-7">
+          <h2 class="subtitle"><i class="fab fa-github-square"></i></h2>
+          <p class="style-text">Github</p>
         </div>
-        <div class="forest-background">
-          <h2 class="subtitle">28 <span class="subtitle-span">%</span></h2>
-          <p class="style-text">Fat Percentage</p>
+        <div class="forest-background" onclick = "directUserToURL(this.id)" id = "wrapper-8">
+          <h2 class="subtitle"><i class="fab fa-pinterest-square"></i></h2>
+          <p class="style-text">Pinterest</p>
         </div>
-        <div class="plant-background box-9">
-          <h2 class="subtitle">118 <span class="subtitle-span">mgdl</span></h2>
-          <p class="style-text">Blood Glucose</p>
+        <div class="plant-background" onclick = "directUserToURL(this.id)" id = "wrapper-9">
+          <h2 class="subtitle"><i class="fab fa-spotify"></i></h2>
+          <p class="style-text">Spotify</p>
         </div>
-        <div class="plant-background box-10">
-          <h2 class="subtitle">680 <span class="subtitle-span">kcal</span></h2>
-          <p class="style-text">AVG Consumption</p>
+        <div class="plant-background" onclick = "directUserToURL(this.id)" id = "wrapper-10">
+          <h2 class="subtitle"><i class="fab fa-youtube"></i></h2>
+          <p class="style-text">Youtube</p>
         </div>
-        <div class="plant-background">
+        <div class="plant-background" onclick = "directUserToURL(this.id)" id = "wrapper-11">
           <h2 class="subtitle"><i class="fas fa-dumbbell"></i></h2>
-          <p class="style-text">Workouts</p>
+          <p class="style-text">Lifetime athletic gym</p>
         </div>
-        <div class="plant-background">
-          <h2 class="subtitle">85 <span class="subtitle-span">%</span></h2>
-          <p class="style-text">Body Hydration</p>
+        <div class="plant-background" onclick = "directUserToURL(this.id)" id = "wrapper-12"> 
+          <h2 class="subtitle"><i class="fab fa-reddit-square"></i></h2>
+          <p class="style-text">Reddit</p>
         </div>
       </div>
     </div>
 
   </body>
   <script src="config.js"></script>
-  <script>
-    var routesDictionary = new Map();
-    document.addEventListener("DOMContentLoaded", () => {
-      const divs = document.getElementsByTagName("div");
-      const numberOfDivs = divs.length;
-      for (let i = 1; i < numberOfDivs; i++) {
-        let url = "";
-        routesDictionary.set(divs[i].id, url);
-      }
-    });
-    function directUserToURL(id_of_div) {
-      let url = routesDictionary.get(id_of_div);
-      window.open(url);
-    }
-      </script>
+ <script src = "imagespan.js"></script>
       <script src="weather.js"></script>
 </html>
