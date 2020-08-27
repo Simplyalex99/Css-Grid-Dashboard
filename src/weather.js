@@ -1,6 +1,5 @@
 
-const dotenv = require("dotenv");
-dotenv.config();
+
 var lon = 0;
 var lat = 0;
 
@@ -13,8 +12,8 @@ function success(position) {
 
   const KELVIN = 273;
   
+const API_KEY = ""; // insert API KEY here
 
-  const API_KEY = process.env.API_KEY;
 
   let url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 
