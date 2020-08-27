@@ -1,3 +1,4 @@
+
 var routesDictionary = new Map();
 
  document.addEventListener("DOMContentLoaded", () => {

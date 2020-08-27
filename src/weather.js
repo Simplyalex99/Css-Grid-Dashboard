@@ -1,5 +1,6 @@
 
-
+const dotenv = require("dotenv");
+dotenv.config();
 var lon = 0;
 var lat = 0;
 
@@ -11,10 +12,12 @@ function success(position) {
   lon = position.coords.longitude;
 
   const KELVIN = 273;
- const API_KEY = "";
+  
+
+  const API_KEY = process.env.API_KEY;
 
   let url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
-  
+
   try {
     fetch(url)
       .then((res) => {
@@ -28,7 +31,7 @@ function success(position) {
         let temperature = Math.floor(body.list[0].main.temp - KELVIN);
         document
           .getElementById("wrapper-4")
-          .getElementsByTagName("h2")[0].innerText = `${temperature}\xB0`; 
+          .getElementsByTagName("h2")[0].innerText = `${temperature}\xB0`;
       });
   } catch (err) {}
 }
