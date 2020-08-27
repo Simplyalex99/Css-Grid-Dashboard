@@ -4,7 +4,7 @@ var lon = 0;
 var lat = 0;
 
 
-navigator.geolocation.getCurrentPosition(success, error);
+navigator.geolocation.getCurrentPosition(success, error); 
 
 function success(position) {
   lat = position.coords.latitude;

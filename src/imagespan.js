@@ -1,8 +1,8 @@
+var routesDictionary = new Map(); 
 
-var routesDictionary = new Map();
-
- document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const divs = document.getElementsByTagName("div");
+  //@desc: stores all icons respective url starting from id = "wrapper-1" to "wrapper-12" order.
   let urls = [
     "https://www.apple.com/ca/fr/",
     "https://twitter.com/LOGIN",
@@ -21,20 +21,12 @@ var routesDictionary = new Map();
   const numberOfDivs = divs.length;
 
   for (let i = 1; i < numberOfDivs; i++) {
-    let url = urls[i-1];
- routesDictionary.set(divs[i].id,url);   
- 
+    let url = urls[i - 1];
+    routesDictionary.set(divs[i].id, url);
   }
-
 });
-
+//@desc: Opens a new tab in browser with the associated URL from a given valid key.
 function directUserToURL(id_of_div) {
   let url = routesDictionary.get(id_of_div);
   window.open(url);
 }
-
-
-
-
-
-
